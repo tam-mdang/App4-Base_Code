@@ -47,8 +47,8 @@ blah, blah, blah, blah
         }
 
 	function calculateResults(){ //added a function that will calculate various results//
-		var periodPercent = 100 * yes_count / 6; //added a function that calculates the probability of having a period soon//
-		var nonperiodPercent = 100 * no_count / 6; //added a function that calculates the probability of not having a period soon//
+		var periodPercent = 100 * period_count / 6; //added a function that calculates the probability of having a period soon//
+		var nonperiodPercent = 100 * nonperiod_count / 6; //added a function that calculates the probability of not having a period soon//
 		var resultText = document.getElementById("results"); //added a function that returns a results element//
 		resultText.innerHTML = "Probability that you will be getting your period soon =" + periodPercent + "<br> Probability that you will not be getting your period soon =" + nonperiodPercent; //used html to display text that summarizes the probability of having a period soon or not//
 	}
@@ -174,5 +174,9 @@ blah, blah, blah, blah
 		<a onclick="calculateResults();" class="w3-btn w3-grey w3-round"> Get Results</a> <!-- added the Get Results button that will calculate the probability results when clicked -->
 	</div> <!-- end division for results page -->
 	   
+	<footer class="w3-bottom w3-container w3-flat-carrot">
+	<p>DIY!</p>
+</footer>
+
    </body>
 </html>
