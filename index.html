@@ -25,7 +25,154 @@ blah, blah, blah, blah
 
    <head> 
       
-	   PUT YOUR OLD CODE IN HERE
+<title>Hello World</title>  
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <link rel="stylesheet" href="w3.css">
+      <link rel="stylesheet" href="w3-colors-flat.css">
+   </head> 
+
+
+<script>
+        var period_count = 0;
+        var nonperiod_count = 0;
+
+        function periodAdd(){
+            period_count = period_count + 1;
+
+        }
+
+        function nonperiodAdd(){
+            nonperiod_count = nonperiod_count + 1;
+        }
+
+	function calculateResults(){ //added a function that will calculate various results//
+		var periodPercent = 100 * yes_count / 6; //added a function that calculates the probability of having a period soon//
+		var nonperiodPercent = 100 * no_count / 6; //added a function that calculates the probability of not having a period soon//
+		var resultText = document.getElementById("results"); //added a function that returns a results element//
+		resultText.innerHTML = "Probability that you will be getting your period soon =" + periodPercent + "<br> Probability that you will not be getting your period soon =" + nonperiodPercent; //used html to display text that summarizes the probability of having a period soon or not//
+	}
+	
+  </script>
+
+
+
+<style>	
+.body {
+     margin: 0em;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+
+  .page:target {
+    left: 0vw;
+    z-index: 1;
+}
+</style>
+
+<body>
+<div id="header" class="w3-container w3-flat-carrot">
+	<h1>Approaching Menstruation?</h1>
+</div>
+	
+<div id="content" class="w3-container">
+	<p>Are you a woman and wondering whether your period may be coming soon? Answer a few short questions to find out!</p>
+	
+	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
+	
+	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+ 	
+	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+
+<div class="page" id="one">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 1</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+        <p>Are you feeling bloated?</p> <!-- added the first question -->
+		<a href="#two" onclick="periodAdd();" class="w3-btn w3-round-large w3-indigo">Yes</a> <!-- added the yes button that will lead to the 2nd page and increase the period count by one when clicked -->
+		<a href="#two" onclick="nonperiodAdd();" class="w3-btn w3-round-large w3-indigo">No</a> <!-- added the no button that will lead to the 2nd page and increase the nonperiod count by one when clicked -->
+    	</div> <!-- end division for main content -->
+</div>
+
+<div class="page" id="two"> <!-- begin division for page two -->
+	<div class="w3-container w3-flat-carrot"> <!-- begin division for header -->
+		<h1>Question 2</h1> <!-- applied header one for question 2 -->
+	</div> <!-- end division for header -->
+	
+	<div id="content" class="w3-container"> <!-- added divider for main content to be placed between the header and footer -->
+		<p>Are you experiencing fatigue?</p> <!-- added the second question -->
+		<a href="#three" onclick="periodAdd();" class="w3-btn w3-round-large w3-indigo">Yes</a> <!-- added the yes button that will lead to the 3rd page and increase the period count by one when clicked -->
+		<a href="#three" onclick="nonperiodAdd();" class="w3-btn w3-round-large w3-indigo">No</a> <!-- added the no button that will lead to the 3rd page and increase the nonperiod count by one when clicked -->
+	</div> <!-- end division for main content -->
+</div> <!-- end division for page two -->
+	
+<div class="page" id="three"> <!-- begin division for page three -->
+	<div class="w3-container w3-flat-carrot"> <!-- begin division for header -->
+		<h1>Question 3</h1> <!-- applied header one for question 3 -->
+	</div> <!-- end division for header -->
+	
+	<div id="content" class="w3-container"> <!-- added divider for main content to be placed between the header and footer -->
+		<p>Do you have tender breasts?</p> <!-- added the third question -->
+		<a href="#four" onclick="periodAdd();" class="w3-btn w3-round-large w3-indigo">Yes</a> <!-- added the yes button that will lead to the 4th page and increase the period count by one when clicked -->
+		<a href="#four" onclick="nonperiodAdd();" class="w3-btn w3-round-large w3-indigo">No</a> <!-- added the no button that will lead to the 4th page and increase the nonperiod count by one when clicked -->
+	</div> <!-- end division for main content -->
+</div> <!-- end division for page three -->
+	
+<div class="page" id="four"> <!-- begin division for page four -->
+	<div class="w3-container w3-flat-carrot"> <!-- begin division for header -->
+		<h1>Question 4</h1> <!-- applied header one for question 4 -->
+	</div> <!-- end division for header -->
+	
+	<div id="content" class="w3-container"> <!-- added divider for main content to be placed between the header and footer -->
+		<p>Do you have abdominal or pelvic cramps?</p> <!-- added the fourth question -->
+		<a href="#five" onclick="periodAdd();" class="w3-btn w3-round-large w3-indigo">Yes</a> <!-- added the yes button that will lead to the 5th page and increase the period count by one when clicked -->
+		<a href="#five" onclick="nonperiodAdd();" class="w3-btn w3-round-large w3-indigo">No</a> <!-- added the no button that will lead to the 5th page and increase the nonperiod count by one when clicked -->
+	</div> <!-- end division for content -->
+</div> <!-- end division for page four -->
+
+<div class="page" id="five"> <!-- begin division for page five -->
+	<div class="w3-container w3-flat-carrot"> <!-- begin division for header -->
+		<h1>Question 5</h1> <!-- applied header one for question 5 -->
+	</div> <!-- end division for header -->
+	
+	<div id="content" class="w3-container"> <!-- added divider for main content to be placed between the header and footer -->
+		<p>Did you get any unexpected acne?</p> <!-- added the fifth question -->
+		<a href="#six" onclick="periodAdd();" class="w3-btn w3-round-large w3-indigo">Yes</a> <!-- added the yes button that will lead to the 6th page and increase the period count by one when clicked -->
+		<a href="#six" onclick="nonperiodAdd();" class="w3-btn w3-round-large w3-indigo">No</a> <!-- added the no button that will lead to the 6th page and increase the nonperiod count by one when clicked -->
+	</div> <!-- end division for content -->
+</div> <!-- end division for page five -->
+	
+<div class="page" id="six"> <!-- begin division for page six -->
+	<div class="w3-container w3-flat-carrot"> <!-- begin division for header -->
+		<h1>Question 6</h1> <!-- applied header one for question 6 -->
+	</div> <!-- end division for header -->
+	
+	<div id="content" class="w3-container"> <!-- added divider for main content to be placed between the header and footer -->
+		<p>Are you experiencing mood swings?</p> <!-- added the sixth question -->
+		<a href="#seven" onclick="periodAdd();" class="w3-btn w3-round-large w3-indigo">Yes</a> <!-- added the yes button that will lead to the results page and increase the period count by one when clicked -->
+		<a href="#seven" onclick="nonperiodAdd();" class="w3-btn w3-round-large w3-indigo">No</a> <!-- added the no button that will lead to the results page and increase the nonperiod count by one when clicked -->
+	</div> <!-- end division for main content -->
+</div> <!-- end division for page six -->
+	
+<div class="page" id="seven"> <!-- begin division for page seven -->
+	<div class="w3-container w3-flat-carrot"> <!-- begin division for header -->
+		<h1>Results</h1> <!-- applied header one for results -->
+		</div> <!-- end division for header -->
+	
+	<p id="results"></p> <!-- created new paragraph for results -->
+		<a onclick="calculateResults();" class="w3-btn w3-grey w3-round"> Get Results</a> <!-- added the Get Results button that will calculate the probability results when clicked -->
+	</div> <!-- end division for results page -->
 	   
    </body>
 </html>
